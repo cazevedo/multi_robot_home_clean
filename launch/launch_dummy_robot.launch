@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="ns"      default="robot_0"/>
+  <arg name="respawn" default="false"/>
+  <arg name="output"  default="screen"/>
+
+  <node pkg="multi_robot_home_clean" type="NavigateActionServer" name="NavigateActionServer" ns="$(arg ns)" respawn="$(arg respawn)" output="$(arg output)"/>
+  <node pkg="multi_robot_home_clean" type="MopActionServer" name="MopActionServer" ns="$(arg ns)" respawn="$(arg respawn)" output="$(arg output)"/>
+  <node pkg="multi_robot_home_clean" type="VacuumActionServer" name="VacuumActionServer" ns="$(arg ns)" respawn="$(arg respawn)" output="$(arg output)"/>
+
+</launch>
