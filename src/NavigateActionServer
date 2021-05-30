@@ -29,7 +29,7 @@ class NavigationActionServer(object):
         elif goal.destination == 2:
             max_time = 5
         else:
-            max_time = 10
+            max_time = 5
 
         travel_time = max_time
         current_time = 0
